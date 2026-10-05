@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- ==========================================================
+     GolTáctico - Página Sobre mí (sobre-mi.html)
+     Autor: Maikol Lopez
+     Curso: ITP2350
+     Creada a partir de template.html
+     ========================================================== -->
+<html lang="es">
+<head>
+    <!-- Información de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce a Maikol Lopez, autor de GolTáctico, y su método para analizar partidos de fútbol.">
+    <meta name="keywords" content="fútbol, análisis táctico, estadísticas, formaciones, xG">
+    <meta name="author" content="Maikol Lopez">
+    <title>Sobre mí | GolTáctico</title>
+
+    <!-- Vínculo a la hoja de estilos externa -->
+    <link rel="stylesheet" href="SiteStyle/global.css">
+</head>
+<body>
+
+    <!-- ===== ENCABEZADO: logo y navegación ===== -->
+    <header>
+        <div class="contenedor">
+
+            <!-- División del logo -->
+            <div id="logo">
+                <img src="SiteImage/logo.png" alt="Logo de GolTáctico">
+                <a href="index.html">GolTáctico</a>
+            </div>
+
+            <!-- Barra de navegación (enlaces a las páginas del sitio) -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="analisis.html">Análisis</a></li>
+                    <li><a href="sobre-mi.html" class="activo">Sobre mí</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BANNER: gráfico + texto ===== -->
+    <div id="banner">
+        <img src="SiteImage/banner.png" alt="Gráfico de una cancha de fútbol con una jugada de pases dibujada">
+        <div class="texto-banner">
+            <div class="contenedor">
+                <p>Sobre mí<span>Quién está detrás de GolTáctico</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ÁREA PRINCIPAL ===== -->
+    <div class="contenedor area-principal">
+
+        <!-- Contenido principal -->
+        <main>
+            <h1>Hola, soy Maikol Lopez</h1>
+
+            <!-- Tópico 1: biografía -->
+            <section>
+                <h2>Mi historia</h2>
+                <figure class="flotar-izquierda foto-perfil">
+                    <img src="SiteImage/foto-perfil.png" alt="Foto de perfil de Maikol Lopez" width="240" height="288">
+                    <figcaption>Maikol Lopez, creador de GolTáctico.</figcaption>
+                </figure>
+                <p>Soy estudiante del Grado Asociado en Tecnología de Información en EDP University y aficionado al fútbol de toda la vida. Me gusta ver los partidos con atención, no solo para saber quién gana, sino para entender por qué gana.</p>
+                <p>Antes de estudiar tecnología trabajé en logística y operaciones, donde dirigí equipos de trabajo. Allí aprendí que los buenos resultados dependen de la organización, la comunicación y de que cada persona sepa exactamente cuál es su función. Es lo mismo que veo en cada partido: los equipos que mejor se organizan casi siempre encuentran la manera de ganar.</p>
+                <p>Creé GolTáctico para unir mis dos intereses, el fútbol y la tecnología, y para compartir con otros aficionados una forma más clara de entender el juego.</p>
+            </section>
+
+            <!-- Tópico 2: misión y visión -->
+            <section>
+                <h2>Misión y visión</h2>
+                <div class="dos-columnas">
+                    <div>
+                        <h3>Misión</h3>
+                        <p>Explicar el fútbol de forma clara, usando datos y video, para que cualquier aficionado entienda lo que pasa en la cancha.</p>
+                    </div>
+                    <div>
+                        <h3>Visión</h3>
+                        <p>Ser una referencia en español para los aficionados que quieren ir más allá del resultado.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tópico 3: método de análisis -->
+            <section>
+                <h2>Mi método de análisis</h2>
+                <p>Cada análisis de GolTáctico sigue los mismos tres pasos:</p>
+                <ol class="pasos">
+                    <li><strong>Observar el partido.</strong> Lo veo completo y anoto los momentos que cambiaron el juego.</li>
+                    <li><strong>Recopilar datos.</strong> Reviso estadísticas como posesión, tiros y xG para confirmar lo que vi.</li>
+                    <li><strong>Explicar con video.</strong> Preparo una animación o un diagrama que muestre la jugada de forma sencilla.</li>
+                </ol>
+                <p><a href="contacto.html" class="boton">Contáctame</a></p>
+            </section>
+        </main>
+
+        <!-- Barra lateral -->
+        <aside>
+            <div class="caja">
+                <h3>Datos rápidos</h3>
+                <ul>
+                    <li>Estudiante de Tecnología de Información</li>
+                    <li>Experiencia dirigiendo equipos de trabajo</li>
+                    <li>Formación favorita: 4-3-3</li>
+                </ul>
+            </div>
+            <div class="caja">
+                <h3>Dónde estudio</h3>
+                <p>Visita el sitio de <a href="https://www.edpuniversity.edu/" target="_blank">EDP University</a>.</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer>
+        <div class="contenedor">
+            <div>
+                <p>&copy; 2026 GolTáctico &ndash; Maikol Lopez</p>
+                <p>¿Tienes un partido que quieres ver analizado? <a href="contacto.html">Escríbeme</a></p>
+            </div>
+            <p><a href="legal.html">Privacidad y términos de uso</a></p>
+            <p class="cita">"Jugar al fútbol es muy sencillo, pero jugar un fútbol sencillo es lo más difícil que hay." &ndash; Johan Cruyff</p>
+        </div>
+    </footer>
+
+</body>
+</html>

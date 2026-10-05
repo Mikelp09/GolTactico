@@ -1,0 +1,542 @@
+/* ==========================================================
+   GolTáctico - Hoja de estilos global
+   Autor: Maikol Lopez
+   Curso: ITP2350 - Laboratorio #3
+   Esta hoja se usa en todas las páginas del sitio.
+   ========================================================== */
+
+/* ---------- Fuentes (Google Fonts) ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap");
+
+/* ---------- Colores del sitio (variables) ---------- */
+:root {
+    --verde-cancha: #1F5C3D;   /* verde principal, como la grama */
+    --verde-oscuro: #174A31;   /* franjas oscuras de la cancha */
+    --tiza: #F5F5EF;           /* blanco tiza de las líneas */
+    --ambar: #F2B134;          /* color de acento (tarjeta amarilla) */
+    --tinta: #1C2321;          /* color del texto */
+    --papel: #EEF1EC;          /* fondo general */
+}
+
+/* ---------- Reglas generales ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--papel);
+    color: var(--tinta);
+    font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    color: var(--verde-oscuro);
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 2.6em;
+    margin: 0 0 0.4em 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin: 1.4em 0 0.5em 0;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--ambar);
+    display: inline-block;
+}
+
+a {
+    color: var(--verde-cancha);
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--verde-oscuro);
+    background-color: #F9E3B0;
+}
+
+/* Contenedor que centra toda la página */
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------- Encabezado: logo + navegación ---------- */
+header {
+    background-color: var(--verde-oscuro);
+    border-bottom: 4px solid var(--ambar);
+}
+
+header .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* División del logo */
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#logo img {
+    width: 56px;
+    height: 56px;
+}
+
+#logo a {
+    font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.9em;
+    color: var(--tiza);
+    text-decoration: none;
+}
+
+#logo a:hover {
+    background-color: transparent;
+    color: var(--ambar);
+}
+
+/* Barra de navegación */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+nav a {
+    display: block;
+    padding: 8px 16px;
+    color: var(--tiza);
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: transparent;
+    color: var(--tiza);
+    border-color: var(--tiza);
+}
+
+/* Página activa en el menú */
+nav a.activo {
+    background-color: var(--ambar);
+    color: var(--tinta);
+}
+
+/* ---------- Banner ---------- */
+#banner {
+    position: relative;
+    background-color: var(--verde-cancha);
+    overflow: hidden;
+}
+
+#banner img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Texto encima de la imagen del banner */
+#banner .texto-banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 24px 0;
+    /* degradado: oscuro a la izquierda para leer el texto,
+       transparente a la derecha para ver la jugada */
+    background: linear-gradient(to right, rgba(23, 74, 49, 0.95) 0%, rgba(23, 74, 49, 0.8) 45%, rgba(23, 74, 49, 0) 75%);
+}
+
+#banner p {
+    margin: 0;
+    font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    font-size: 2.2em;
+    color: var(--tiza);
+}
+
+#banner p span {
+    display: block;
+    font-family: "Source Sans 3", Arial, sans-serif;
+    font-size: 0.45em;
+    color: var(--ambar);
+}
+
+/* ---------- Área principal: contenido + barra lateral ---------- */
+.area-principal {
+    display: flex;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+main {
+    flex: 3;
+    min-width: 0;
+}
+
+aside {
+    flex: 1;
+    min-width: 230px;
+}
+
+/* Cada tópico es una sección */
+main section {
+    overflow: hidden;   /* evita que las imágenes flotantes se salgan */
+    margin-bottom: 20px;
+}
+
+/* ---------- Imágenes con figure y figcaption ---------- */
+figure {
+    margin: 0 0 16px 0;
+    background-color: #FFFFFF;
+    padding: 8px;
+    border: 1px solid #C9D3CC;
+    border-radius: 6px;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+figcaption {
+    font-size: 0.85em;
+    color: #4A5550;
+    padding-top: 6px;
+    font-style: italic;
+}
+
+/* Imagen flotando a la derecha: el texto fluye a la izquierda */
+.flotar-derecha {
+    float: right;
+    width: 260px;
+    margin-left: 24px;
+}
+
+/* Imagen flotando a la izquierda: el texto fluye a la derecha */
+.flotar-izquierda {
+    float: left;
+    width: 360px;
+    margin-right: 24px;
+}
+
+/* ---------- Listas y tablas ---------- */
+main ul li {
+    margin-bottom: 6px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px 0;
+    background-color: #FFFFFF;
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #D5DDD7;
+}
+
+th {
+    background-color: var(--verde-oscuro);
+    color: var(--tiza);
+    font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.1em;
+}
+
+tr:nth-child(even) td {
+    background-color: #F4F7F4;
+}
+
+/* ---------- Barra lateral ---------- */
+aside .caja {
+    background-color: #FFFFFF;
+    border-left: 5px solid var(--ambar);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    border-radius: 0 6px 6px 0;
+}
+
+aside h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+aside ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+aside li {
+    margin-bottom: 8px;
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+    background-color: var(--verde-oscuro);
+    color: var(--tiza);
+    border-top: 4px solid var(--ambar);
+    padding: 28px 0;
+    font-size: 0.95em;
+}
+
+footer .contenedor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+footer a {
+    color: var(--ambar);
+}
+
+footer a:hover {
+    background-color: transparent;
+    color: var(--tiza);
+}
+
+footer .cita {
+    font-style: italic;
+    max-width: 360px;
+}
+
+/* ---------- Pantallas pequeñas (teléfonos) ---------- */
+@media (max-width: 760px) {
+    .area-principal {
+        flex-direction: column;
+    }
+
+    .flotar-derecha,
+    .flotar-izquierda {
+        float: none;
+        width: 100%;
+        margin: 0 0 16px 0;
+    }
+
+    #banner img {
+        height: 200px;
+    }
+
+    #banner p {
+        font-size: 1.6em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+/* ==========================================================
+   Estilos añadidos para las páginas internas
+   (Análisis, Sobre mí, Contacto y Legales)
+   ========================================================== */
+
+/* Texto introductorio debajo del h1 */
+.intro {
+    font-size: 1.1em;
+    max-width: 680px;
+}
+
+/* ---------- Video ---------- */
+.video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    background-color: var(--verde-oscuro);
+}
+
+/* Nota pequeña debajo de las tablas */
+.nota {
+    font-size: 0.85em;
+    color: #4A5550;
+    font-style: italic;
+}
+
+/* ---------- Botón (enlace con forma de botón) ---------- */
+.boton {
+    display: inline-block;
+    padding: 12px 26px;
+    background-color: var(--ambar);
+    color: var(--tinta);
+    text-decoration: none;
+    border-radius: 4px;
+    border: 2px solid var(--ambar);
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--verde-oscuro);
+    border-color: var(--verde-oscuro);
+}
+
+/* ---------- Misión y visión en dos columnas ---------- */
+.dos-columnas {
+    display: flex;
+    gap: 20px;
+    clear: both;
+}
+
+.dos-columnas div {
+    flex: 1;
+    background-color: #FFFFFF;
+    border-top: 5px solid var(--verde-cancha);
+    padding: 4px 20px 12px 20px;
+    border-radius: 0 0 6px 6px;
+}
+
+.dos-columnas h3 {
+    font-size: 1.5em;
+}
+
+/* ---------- Pasos del método ---------- */
+.pasos {
+    list-style: none;
+    padding: 0;
+    counter-reset: paso;
+}
+
+.pasos li {
+    counter-increment: paso;
+    position: relative;
+    padding: 12px 16px 12px 64px;
+    margin-bottom: 12px;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
+
+/* Número grande al lado de cada paso */
+.pasos li::before {
+    content: counter(paso);
+    position: absolute;
+    left: 16px;
+    top: 10px;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--verde-oscuro);
+    color: var(--ambar);
+    font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.3em;
+}
+
+/* ---------- Formulario de contacto ---------- */
+form {
+    background-color: #FFFFFF;
+    padding: 24px;
+    border-radius: 6px;
+    border: 1px solid #C9D3CC;
+    max-width: 620px;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 1em;
+    border: 2px solid #C9D3CC;
+    border-radius: 4px;
+    background-color: var(--papel);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--verde-cancha);
+    background-color: #FFFFFF;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.casilla label {
+    display: inline;
+    font-weight: 400;
+}
+
+.obligatorio {
+    color: #B5452F;
+}
+
+button {
+    padding: 12px 32px;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: var(--verde-oscuro);
+    color: var(--tiza);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--ambar);
+    color: var(--tinta);
+}
+
+/* Mensaje que aparece después de enviar el formulario */
+.mensaje-confirmacion {
+    background-color: #E3F1E7;
+    border-left: 5px solid var(--verde-cancha);
+    padding: 16px 20px;
+    border-radius: 0 6px 6px 0;
+    max-width: 620px;
+}
+
+.oculto {
+    display: none;
+}
+
+@media (max-width: 760px) {
+    .dos-columnas {
+        flex-direction: column;
+    }
+}
+
+/* Ancho de la foto de perfil (Sobre mí) */
+.foto-perfil {
+    width: 240px;
+}

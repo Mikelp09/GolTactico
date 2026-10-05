@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- ==========================================================
+     GolTáctico - Página de contacto (contacto.html)
+     Autor: Maikol Lopez
+     Curso: ITP2350
+     Creada a partir de template.html
+     ========================================================== -->
+<html lang="es">
+<head>
+    <!-- Información de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escríbele a GolTáctico para sugerir partidos, hacer preguntas o proponer colaboraciones.">
+    <meta name="keywords" content="fútbol, análisis táctico, estadísticas, formaciones, xG">
+    <meta name="author" content="Maikol Lopez">
+    <title>Contacto | GolTáctico</title>
+
+    <!-- Vínculo a la hoja de estilos externa -->
+    <link rel="stylesheet" href="SiteStyle/global.css">
+</head>
+<body>
+
+    <!-- ===== ENCABEZADO: logo y navegación ===== -->
+    <header>
+        <div class="contenedor">
+
+            <!-- División del logo -->
+            <div id="logo">
+                <img src="SiteImage/logo.png" alt="Logo de GolTáctico">
+                <a href="index.html">GolTáctico</a>
+            </div>
+
+            <!-- Barra de navegación (enlaces a las páginas del sitio) -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="analisis.html">Análisis</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                    <li><a href="contacto.html" class="activo">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BANNER: gráfico + texto ===== -->
+    <div id="banner">
+        <img src="SiteImage/banner.png" alt="Gráfico de una cancha de fútbol con una jugada de pases dibujada">
+        <div class="texto-banner">
+            <div class="contenedor">
+                <p>Contacto<span>Sugiere un partido o escríbeme tu pregunta</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ÁREA PRINCIPAL ===== -->
+    <div class="contenedor area-principal">
+
+        <!-- Contenido principal -->
+        <main>
+            <h1>Escríbeme</h1>
+            <p class="intro">¿Hay un partido que quieres ver analizado o una jugada que no entendiste? Completa el formulario y te respondo lo antes posible.</p>
+
+            <!-- Tópico 1: formulario de contacto -->
+            <section>
+                <h2>Formulario de contacto</h2>
+                <form id="form-contacto" action="#" method="post">
+
+                    <div class="campo">
+                        <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico <span class="obligatorio">*</span></label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto">
+                            <option value="sugerencia">Sugerir un partido</option>
+                            <option value="pregunta">Pregunta sobre un análisis</option>
+                            <option value="colaboracion">Colaboración</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="equipo">Equipo favorito</label>
+                        <input type="text" id="equipo" name="equipo">
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje <span class="obligatorio">*</span></label>
+                        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                    </div>
+
+                    <div class="campo casilla">
+                        <input type="checkbox" id="privacidad" name="privacidad" required>
+                        <label for="privacidad">Acepto la <a href="legal.html">política de privacidad</a></label>
+                    </div>
+
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+
+                <!-- Mensaje de confirmación (se muestra al enviar) -->
+                <div id="confirmacion" class="mensaje-confirmacion oculto">
+                    <p><strong>Mensaje enviado.</strong> Gracias por escribir. Te responderé en un plazo de 2 a 3 días.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Barra lateral -->
+        <aside>
+            <div class="caja">
+                <h3>¿Qué puedes escribirme?</h3>
+                <ul>
+                    <li>Partidos que quieres ver analizados</li>
+                    <li>Dudas sobre tácticas o estadísticas</li>
+                    <li>Ideas para colaborar</li>
+                </ul>
+            </div>
+            <div class="caja">
+                <h3>Tiempo de respuesta</h3>
+                <p>Respondo los mensajes en un plazo de 2 a 3 días.</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer>
+        <div class="contenedor">
+            <div>
+                <p>&copy; 2026 GolTáctico &ndash; Maikol Lopez</p>
+                <p>¿Tienes un partido que quieres ver analizado? <a href="contacto.html">Escríbeme</a></p>
+            </div>
+            <p><a href="legal.html">Privacidad y términos de uso</a></p>
+            <p class="cita">"Jugar al fútbol es muy sencillo, pero jugar un fútbol sencillo es lo más difícil que hay." &ndash; Johan Cruyff</p>
+        </div>
+    </footer>
+
+    <!-- Script: muestra el mensaje de confirmación al enviar el formulario.
+         El sitio está en GitHub Pages (sin servidor), por eso el
+         formulario no envía datos reales. -->
+    <script>
+        document.getElementById("form-contacto").addEventListener("submit", function (evento) {
+            evento.preventDefault();
+            this.classList.add("oculto");
+            document.getElementById("confirmacion").classList.remove("oculto");
+        });
+    </script>
+</body>
+</html>

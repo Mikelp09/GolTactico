@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- ==========================================================
+     GolTáctico - Página de análisis (analisis.html)
+     Autor: Maikol Lopez
+     Curso: ITP2350
+     Creada a partir de template.html
+     ========================================================== -->
+<html lang="es">
+<head>
+    <!-- Información de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Análisis tácticos de fútbol con video, explicación paso a paso y estadísticas del partido.">
+    <meta name="keywords" content="fútbol, análisis táctico, estadísticas, formaciones, xG">
+    <meta name="author" content="Maikol Lopez">
+    <title>Análisis | GolTáctico</title>
+
+    <!-- Vínculo a la hoja de estilos externa -->
+    <link rel="stylesheet" href="SiteStyle/global.css">
+</head>
+<body>
+
+    <!-- ===== ENCABEZADO: logo y navegación ===== -->
+    <header>
+        <div class="contenedor">
+
+            <!-- División del logo -->
+            <div id="logo">
+                <img src="SiteImage/logo.png" alt="Logo de GolTáctico">
+                <a href="index.html">GolTáctico</a>
+            </div>
+
+            <!-- Barra de navegación (enlaces a las páginas del sitio) -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="analisis.html" class="activo">Análisis</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BANNER: gráfico + texto ===== -->
+    <div id="banner">
+        <img src="SiteImage/banner.png" alt="Gráfico de una cancha de fútbol con una jugada de pases dibujada">
+        <div class="texto-banner">
+            <div class="contenedor">
+                <p>Análisis tácticos<span>Video, explicación y números de cada jugada</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ÁREA PRINCIPAL ===== -->
+    <div class="contenedor area-principal">
+
+        <!-- Contenido principal -->
+        <main>
+            <h1>Tres pases para romper una defensa</h1>
+            <p class="intro">Muchos goles no nacen de una genialidad individual, sino de una secuencia sencilla de pases bien hechos. En este análisis vemos cómo tres pases y una buena carrera sin balón pueden dejar a un delantero solo frente al portero.</p>
+
+            <!-- Tópico 1: el video de la jugada -->
+            <section>
+                <h2>La jugada en video</h2>
+                <figure class="video">
+                    <video controls preload="metadata" poster="SiteImage/jugada-poster.png" width="960" height="540">
+                        <source src="SiteImage/jugada.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este video.
+                    </video>
+                    <figcaption>Animación de la jugada: los atacantes en amarillo y los defensas en rojo.</figcaption>
+                </figure>
+            </section>
+
+            <!-- Tópico 2: explicación paso a paso -->
+            <section>
+                <h2>Paso a paso</h2>
+                <p>La clave de esta jugada es que cada jugador hace su trabajo en el momento justo. Si uno de ellos se adelanta o se retrasa un segundo, la defensa tiene tiempo de reorganizarse.</p>
+                <ol>
+                    <li><strong>El mediocampista recibe</strong> en el centro del campo con espacio para girarse.</li>
+                    <li><strong>El delantero baja a recibir.</strong> Al salir de la zona de los centrales, uno de ellos lo sigue y deja un hueco detrás.</li>
+                    <li><strong>El extremo ataca ese hueco</strong> corriendo en diagonal hacia el área, a la espalda de la defensa.</li>
+                    <li><strong>Pase filtrado y remate.</strong> El delantero le da el balón al primer toque y el extremo define antes de que llegue la cobertura.</li>
+                </ol>
+                <p>Este tipo de jugada es muy común en equipos que juegan con 4-3-3, porque los extremos están abiertos y listos para correr hacia adentro. Si quieres repasar las reglas del juego, como el fuera de juego que esta jugada evita, consulta el sitio oficial de la <a href="https://www.theifab.com/" target="_blank">IFAB</a>.</p>
+            </section>
+
+            <!-- Tópico 3: estadísticas -->
+            <section>
+                <h2>Estadísticas del partido</h2>
+                <figure class="flotar-derecha">
+                    <img src="SiteImage/estadisticas.png" alt="Gráfica de barras que compara posesión, tiros, tiros a puerta y goles esperados entre dos equipos" width="260" height="156">
+                    <figcaption>Comparación visual de los dos equipos.</figcaption>
+                </figure>
+                <p>Los números confirman lo que se vio en la cancha: el equipo local tuvo más el balón y, sobre todo, generó ocasiones de mejor calidad. Su xG casi duplica al del visitante, lo que significa que sus tiros fueron desde posiciones mucho más peligrosas.</p>
+                <p>El dato más interesante es el de tiros a puerta. El visitante remató nueve veces, pero solo tres fueron al arco: muchos de sus tiros fueron desde lejos y con poca probabilidad de gol.</p>
+
+                <!-- Tabla de estadísticas -->
+                <table>
+                    <tr>
+                        <th>Estadística</th>
+                        <th>Local</th>
+                        <th>Visitante</th>
+                    </tr>
+                    <tr>
+                        <td>Posesión (%)</td>
+                        <td>58</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>Tiros</td>
+                        <td>14</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>Tiros a puerta</td>
+                        <td>6</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>xG (goles esperados)</td>
+                        <td>1.8</td>
+                        <td>0.9</td>
+                    </tr>
+                    <tr>
+                        <td>Pases completados</td>
+                        <td>512</td>
+                        <td>371</td>
+                    </tr>
+                </table>
+                <p class="nota">Datos de ejemplo usados para explicar cómo se leen las estadísticas.</p>
+            </section>
+        </main>
+
+        <!-- Barra lateral -->
+        <aside>
+            <div class="caja">
+                <h3>Próximos análisis</h3>
+                <ul>
+                    <li>Real Madrid vs. Barcelona: el duelo en el mediocampo</li>
+                    <li>¿Por qué funciona la presión alta?</li>
+                    <li>Los mejores goles de la semana, explicados</li>
+                </ul>
+            </div>
+            <div class="caja">
+                <h3>Categorías</h3>
+                <ul>
+                    <li>Jugadas de ataque</li>
+                    <li>Defensa y presión</li>
+                    <li>Formaciones</li>
+                    <li>Estadísticas</li>
+                </ul>
+            </div>
+            <div class="caja">
+                <h3>Datos abiertos</h3>
+                <p>Las estadísticas reales de las grandes ligas están disponibles gratis en <a href="https://fbref.com/es/" target="_blank">FBref</a>.</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer>
+        <div class="contenedor">
+            <div>
+                <p>&copy; 2026 GolTáctico &ndash; Maikol Lopez</p>
+                <p>¿Tienes un partido que quieres ver analizado? <a href="contacto.html">Escríbeme</a></p>
+            </div>
+            <p><a href="legal.html">Privacidad y términos de uso</a></p>
+            <p class="cita">"Jugar al fútbol es muy sencillo, pero jugar un fútbol sencillo es lo más difícil que hay." &ndash; Johan Cruyff</p>
+        </div>
+    </footer>
+
+</body>
+</html>

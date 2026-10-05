@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- ==========================================================
+     GolTáctico - Página de inicio (index.html)
+     Autor: Maikol Lopez
+     Curso: ITP2350 - Laboratorio #3
+     Creada a partir de template.html
+     ========================================================== -->
+<html lang="es">
+<head>
+    <!-- Información de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GolTáctico explica partidos de fútbol con análisis tácticos, estadísticas y videos.">
+    <meta name="keywords" content="fútbol, análisis táctico, estadísticas, formaciones, xG">
+    <meta name="author" content="Maikol Lopez">
+    <title>Inicio | GolTáctico - El fútbol, explicado con datos</title>
+
+    <!-- Vínculo a la hoja de estilos externa -->
+    <link rel="stylesheet" href="SiteStyle/global.css">
+</head>
+<body>
+
+    <!-- ===== ENCABEZADO: logo y navegación ===== -->
+    <header>
+        <div class="contenedor">
+
+            <!-- División del logo -->
+            <div id="logo">
+                <img src="SiteImage/logo.png" alt="Logo de GolTáctico">
+                <a href="index.html">GolTáctico</a>
+            </div>
+
+            <!-- Barra de navegación (enlaces a las páginas del sitio) -->
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="analisis.html">Análisis</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BANNER: gráfico + texto ===== -->
+    <div id="banner">
+        <img src="SiteImage/banner.png" alt="Gráfico de una cancha de fútbol con una jugada de pases dibujada">
+        <div class="texto-banner">
+            <div class="contenedor">
+                <p>El fútbol, explicado con datos<span>Análisis tácticos, estadísticas y videos para entender cada partido</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ÁREA PRINCIPAL ===== -->
+    <div class="contenedor area-principal">
+
+        <!-- Contenido principal -->
+        <main>
+            <h1>Bienvenido a GolTáctico</h1>
+            <p>Después de cada partido todo el mundo opina, pero pocas veces alguien explica qué pasó de verdad en la cancha. GolTáctico nace para eso: mirar el partido con calma, revisar los números y contarte, en pocas palabras y con imágenes, por qué un equipo ganó o perdió.</p>
+
+            <!-- Tópico 1: la formación 4-3-3 -->
+            <section>
+                <h2>La formación 4-3-3, paso a paso</h2>
+                <figure class="flotar-derecha">
+                    <img src="SiteImage/formacion-433.png" alt="Diagrama de una cancha con once jugadores ubicados en formación 4-3-3" width="260" height="383">
+                    <figcaption>Formación 4-3-3: los tres delanteros aparecen en amarillo.</figcaption>
+                </figure>
+                <p>El 4-3-3 es una de las formaciones más usadas en el fútbol moderno. Los números se leen desde atrás hacia adelante: cuatro defensas, tres mediocampistas y tres delanteros. El portero no se cuenta porque siempre está.</p>
+                <p>Su gran ventaja es que ocupa bien todo el ancho de la cancha. Los dos extremos abren el campo por las bandas, el delantero centro fija a los defensas rivales y los tres mediocampistas controlan el balón en el centro. Equipos como el Barcelona de Guardiola hicieron famoso este sistema.</p>
+                <p>Estas son las funciones principales de cada línea:</p>
+                <ul>
+                    <li><strong>Defensa (4):</strong> dos centrales que protegen el área y dos laterales que suben a atacar por las bandas.</li>
+                    <li><strong>Mediocampo (3):</strong> un pivote defensivo (el 6) y dos interiores que conectan con el ataque.</li>
+                    <li><strong>Ataque (3):</strong> dos extremos rápidos y un delantero centro que termina las jugadas.</li>
+                </ul>
+                <p>Si quieres ver cómo explica la FIFA las reglas y el juego, visita el <a href="https://www.fifa.com/es" target="_blank">sitio oficial de la FIFA</a>.</p>
+            </section>
+
+            <!-- Tópico 2: estadísticas -->
+            <section>
+                <h2>Los números que importan</h2>
+                <figure class="flotar-izquierda">
+                    <img src="SiteImage/estadisticas.png" alt="Gráfica de barras que compara posesión, tiros, tiros a puerta y goles esperados entre dos equipos" width="360" height="216">
+                    <figcaption>Ejemplo de cómo se comparan dos equipos en un partido.</figcaption>
+                </figure>
+                <p>El marcador no siempre cuenta toda la historia. Un equipo puede perder 1-0 habiendo creado muchas más ocasiones que su rival. Por eso en cada análisis de GolTáctico revisamos algunas estadísticas clave que ayudan a entender quién dominó de verdad el partido.</p>
+                <p>La métrica más útil hoy es el xG, o goles esperados. Mide la probabilidad de que un tiro termine en gol según la distancia, el ángulo y el tipo de jugada. Si quieres explorar estos datos por tu cuenta, <a href="https://fbref.com/es/" target="_blank">FBref</a> tiene estadísticas gratuitas de las principales ligas del mundo.</p>
+
+                <!-- Tabla con las estadísticas que usamos -->
+                <table>
+                    <tr>
+                        <th>Estadística</th>
+                        <th>¿Qué mide?</th>
+                        <th>¿Por qué importa?</th>
+                    </tr>
+                    <tr>
+                        <td>Posesión (%)</td>
+                        <td>Tiempo que cada equipo tiene el balón</td>
+                        <td>Muestra quién controla el ritmo del partido</td>
+                    </tr>
+                    <tr>
+                        <td>Tiros a puerta</td>
+                        <td>Remates que van dentro del arco</td>
+                        <td>Indica qué tan peligroso fue el ataque</td>
+                    </tr>
+                    <tr>
+                        <td>xG (goles esperados)</td>
+                        <td>Calidad de las ocasiones creadas</td>
+                        <td>Dice cuántos goles "merecía" marcar un equipo</td>
+                    </tr>
+                    <tr>
+                        <td>Pases completados</td>
+                        <td>Pases que llegan a un compañero</td>
+                        <td>Refleja la precisión y la organización del equipo</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+
+        <!-- Barra lateral -->
+        <aside>
+            <div class="caja">
+                <h3>Próximos análisis</h3>
+                <ul>
+                    <li>Real Madrid vs. Barcelona: el duelo en el mediocampo</li>
+                    <li>¿Por qué funciona la presión alta?</li>
+                    <li>Los mejores goles de la semana, explicados</li>
+                </ul>
+            </div>
+            <div class="caja">
+                <h3>Ligas que seguimos</h3>
+                <ul>
+                    <li><a href="https://www.laliga.com/" target="_blank">LaLiga (España)</a></li>
+                    <li><a href="https://www.premierleague.com/" target="_blank">Premier League (Inglaterra)</a></li>
+                    <li><a href="https://www.mlssoccer.com/" target="_blank">MLS (Estados Unidos)</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer>
+        <div class="contenedor">
+            <div>
+                <p>&copy; 2026 GolTáctico &ndash; Maikol Lopez</p>
+                <p>¿Tienes un partido que quieres ver analizado? <a href="contacto.html">Escríbeme</a></p>
+            </div>
+            <p><a href="legal.html">Privacidad y términos de uso</a></p>
+            <p class="cita">"Jugar al fútbol es muy sencillo, pero jugar un fútbol sencillo es lo más difícil que hay." &ndash; Johan Cruyff</p>
+        </div>
+    </footer>
+
+</body>
+</html>
